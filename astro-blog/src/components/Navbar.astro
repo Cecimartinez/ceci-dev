@@ -1,6 +1,7 @@
-<div class="navbar fixed top-0 left-0 flex justify-center mb-0 bg-white shadow text-gray-900 z-10">
+<div class="navbar fixed top-0 left-0 flex justify-between md:items-baseline md:justify-between mb-0 bg-white shadow text-gray-900 z-10">
   <div class="navbar-start w-auto -0">
-    <div class="dropdown ">
+    
+    <div class="dropdown md:hidden">
       <label tabindex="0" class="btn btn-ghost btn-circle ml-auto">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
@@ -11,8 +12,19 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+    
+    <div class="md:flex md:items-center md:space-x-2 w-full hidden md:justify-center px-10">
+      <ul tabindex="0" class="menu-md  bg-white items-center justify-center mt-2 z-[1] flex px-2 font-medium ">
+        <li><a class="px-4 transition-colors hover:text-yellow-500" href="#about">About</a></li>
+        <li><a class="px-4 transition-colors hover:text-yellow-500" href="#services">Services</a></li>
+        <li><a class="px-4 transition-colors hover:text-yellow-500" href="#projects">Projects</a></li>
+        <li><a class="px-4 transition-colors hover:text-yellow-500" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="navbar-center flex justify-center flex-grow">
-    <a href="/" class="btn btn-ghost normal-case text-xl text-center">Ceci Dev 🌙</a>
+
+  <div class="navbar-center flex  justify-center  md:flex-grow-0 md:mr-10">
+    <a href="/" class="btn btn-ghost normal-case text-lg text-center">Ceci Dev 🌙</a>
   </div>
+
 </div>
