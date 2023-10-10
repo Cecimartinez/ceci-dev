@@ -16,6 +16,14 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("cTAv1kjXy1YVuBDkk");
+    </script>
   </head>
   <body>
     <Navbar />
@@ -54,20 +62,20 @@ const { title } = Astro.props;
   }
 
   ::-webkit-scrollbar {
-  width: 10px; 
-}
+    width: 10px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: #FFD400;
-  border-radius: 5px; 
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffd400;
+    border-radius: 5px;
+  }
 
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
 
-.svg-header{
-  /* filter: brightness(1.1); */
-  mix-blend-mode: color;
-}
+  .svg-header {
+    /* filter: brightness(1.1); */
+    mix-blend-mode: color;
+  }
 </style>
