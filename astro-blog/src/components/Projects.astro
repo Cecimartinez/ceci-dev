@@ -1,109 +1,113 @@
+---
+const projects = [
+  {
+    name: "Restaurant Foodie",
+    description: "Landing page - Foodie restaurant",
+    imgSrc: "././chef-hat.svg",
+    link: "https://cecimartinez.github.io/restaurant-foodie/",
+
+  },
+  {
+    name: "Portfolio",
+    description: "My personal portfolio website",
+    imgSrc: "././user-scan.svg",
+    link: "https://cecimartinez.github.io/Portafolio/",
+
+  },
+  {
+    name: "People Table",
+    description:
+      "Table of employee data according to their category and company",
+    imgSrc: "././users.svg",
+    link: "https://github.com/Cecimartinez/GP_TEST",
+
+  },
+  {
+    name: "Delicate Macarons",
+    description: "A website for macarons lovers",
+    imgSrc: "././cookie.svg",
+    link: "https://cecimartinez.github.io/Delicate-Macarons/",
+
+  },
+  {
+    name: "Whether App",
+    description: "A weather forecast application",
+    imgSrc: "././cloud-filled.svg",
+    link: "https://github.com/Cecimartinez/Weather-app",
+
+  },
+  {
+    name: "Medical Center",
+    description: "Medical Center Patient Management Application",
+    imgSrc: "././building-hospital.svg",
+    link: "https://github.com/Cecimartinez/centro-medico",
+
+  },
+  {
+    name: "Counter App",
+    description: "A simple counter application",
+    imgSrc: "././123.svg",
+    link: "https://github.com/Cecimartinez/Counter-App",
+
+  },
+  {
+    name: "Calculator",
+    description: "A basic calculator tool",
+    imgSrc: "././calculator-filled.svg",
+    link: "https://cecimartinez.github.io/Calculadora/",
+
+  },
+  {
+    name: "Four in Line Game",
+    description: "A classic four-in-a-row game",
+    imgSrc: "././dice-4.svg",
+    link: "https://github.com/Cecimartinez/juego-cuatro-en-linea",
+
+  },
+  {
+    name: "Challenge Dev - NCR",
+    description: "A development challenge project",
+    imgSrc: "././credit-card.svg",
+    link: "https://github.com/Cecimartinez/TestChallengeDev_NCR",
+
+  },
+];
+---
+
 <div
   id="projects"
-  class="container-project flex-col mt-48 bg-white py-10 items-center flex w-full px-0"
+  class="container-project flex-col mt-48 bg-white  items-center flex w-full px-0"
 >
-  <div class="mx-auto max-w-2xl text-center w-full mb-7">
+  <div class="mx-auto max-w-2xl text-center w-full mb-2">
     <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
       Projects
     </h2>
     <p class="mt-2 text-lg leading-8 text-gray-600">
-      Aute magna irure deserunt veniam aliqua magna enim voluptate.
+      Explore some of the projects I've done.
     </p>
   </div>
 
-  <!-- carrousel-card -->
   <div
-    class="carrousel-card-container w-full py-10 my-10 mx-10 grid grid-flow-col gap-7 overflow-x-auto overscroll-x-contain"
+    class="carrousel-card-container w-full py-4 my-4 px-2 grid grid-flow-col gap-7 overflow-x-auto overscroll-x-contain"
   >
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg w-full shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
+    {
+      projects.map((project) => (
+      <a href={project.link} target="_blank" rel="noopener noreferrer" >
 
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
-
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
-
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
-
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
-
-    <div
-      class="card-carrousel flex-col w-60 rounded-lg flex shadow-lg mx-2 my-5 bg-white"
-    >
-      <figure class="py-3 flex justify-center items-center">
-        <img src="././icon.svg" alt="Shoes" class="w-full h-40" />
-      </figure>
-      <div
-        class="bg-white rounded-lg shadow flex justify-center items-center px-7 py-5 flex-col h-full text-gray-900"
-      >
-        <h2 class="text-sm text-gray-700 text-center font-medium">
-          Project Name
-        </h2>
-      </div>
-    </div>
+        <div class="card-carrousel flex-col  w-72 rounded-lg flex shadow-lg mx-2 my-5 bg-white">
+          <div class=" flex  justify-center mx-20 my-12  py-10 px-10 rounded-lg items-center bg-yellow-400">
+            <img src={project.imgSrc} alt={project.name} class="" />
+          </div>
+          <div class="bg-white rounded-lg py-12 shadow flex justify-center items-center px-7  flex-col h-20 text-gray-900">
+            <h2 class="text-sm text-gray-700 mt-2 text-center font-semibold">
+              {project.name}
+            </h2>
+            <p class="text-xs my-3">{project.description}</p>
+          </div>
+        </div>
+        </a>
+      ))
+    }
   </div>
 </div>
 
