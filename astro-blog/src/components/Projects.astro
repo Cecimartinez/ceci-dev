@@ -1,82 +1,10 @@
 ---
-const projects = [
-  {
-    name: "Restaurant Foodie",
-    description: "Landing page - Foodie restaurant",
-    imgSrc: "././chef-hat.svg",
-    link: "https://cecimartinez.github.io/restaurant-foodie/",
-
-  },
-  {
-    name: "Portfolio",
-    description: "My personal portfolio website",
-    imgSrc: "././user-scan.svg",
-    link: "https://cecimartinez.github.io/Portafolio/",
-
-  },
-  {
-    name: "People Table",
-    description:
-      "Table of employee data according to their category and company",
-    imgSrc: "././users.svg",
-    link: "https://github.com/Cecimartinez/GP_TEST",
-
-  },
-  {
-    name: "Delicate Macarons",
-    description: "A website for macarons lovers",
-    imgSrc: "././cookie.svg",
-    link: "https://cecimartinez.github.io/Delicate-Macarons/",
-
-  },
-  {
-    name: "Whether App",
-    description: "A weather forecast application",
-    imgSrc: "././cloud-filled.svg",
-    link: "https://github.com/Cecimartinez/Weather-app",
-
-  },
-  {
-    name: "Medical Center",
-    description: "Medical Center Patient Management Application",
-    imgSrc: "././building-hospital.svg",
-    link: "https://github.com/Cecimartinez/centro-medico",
-
-  },
-  {
-    name: "Counter App",
-    description: "A simple counter application",
-    imgSrc: "././123.svg",
-    link: "https://github.com/Cecimartinez/Counter-App",
-
-  },
-  {
-    name: "Calculator",
-    description: "A basic calculator tool",
-    imgSrc: "././calculator-filled.svg",
-    link: "https://cecimartinez.github.io/Calculadora/",
-
-  },
-  {
-    name: "Four in Line Game",
-    description: "A classic four-in-a-row game",
-    imgSrc: "././dice-4.svg",
-    link: "https://github.com/Cecimartinez/juego-cuatro-en-linea",
-
-  },
-  {
-    name: "Challenge Dev - NCR",
-    description: "A development challenge project",
-    imgSrc: "././credit-card.svg",
-    link: "https://github.com/Cecimartinez/TestChallengeDev_NCR",
-
-  },
-];
+import { projects } from "../data/projects";
 ---
 
 <div
   id="projects"
-  class="container-project flex-col mt-20 bg-white  items-center flex w-full px-0"
+  class="container-project flex-col mt-20 bg-white items-center flex w-full px-0"
 >
   <div class="mx-auto max-w-2xl text-center w-full mb-2">
     <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -92,19 +20,18 @@ const projects = [
   >
     {
       projects.map((project) => (
-      <a href={project.link} target="_blank" rel="noopener noreferrer" >
-
-        <div class="card-carrousel flex-col  w-72 rounded-lg flex shadow-lg mx-2 my-5 bg-white">
-          <div class=" flex  justify-center mx-20 my-12  py-10 px-10 rounded-lg items-center bg-yellow-400">
-            <img src={project.imgSrc} alt={project.name} class=" w-10 h-10" />
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <div class="card-carrousel flex-col  w-72 rounded-lg flex shadow-lg mx-2 my-5 bg-white">
+            <div class=" flex  justify-center mx-20 my-12  py-10 px-10 rounded-lg items-center bg-yellow-400">
+              <img src={project.imgSrc} alt={project.name} class=" w-10 h-10" />
+            </div>
+            <div class="bg-white rounded-lg py-12 shadow flex justify-center items-center px-7  flex-col h-20 text-gray-900">
+              <h2 class="text-sm text-gray-700 mt-2 text-center font-semibold">
+                {project.name}
+              </h2>
+              <p class="text-xs my-3">{project.description}</p>
+            </div>
           </div>
-          <div class="bg-white rounded-lg py-12 shadow flex justify-center items-center px-7  flex-col h-20 text-gray-900">
-            <h2 class="text-sm text-gray-700 mt-2 text-center font-semibold">
-              {project.name}
-            </h2>
-            <p class="text-xs my-3">{project.description}</p>
-          </div>
-        </div>
         </a>
       ))
     }
