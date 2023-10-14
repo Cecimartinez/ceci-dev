@@ -15,16 +15,51 @@ import { projects } from "../data/projects";
     </p>
   </div>
 
-  <div
-    class="carrousel-card-container w-full py-4 my-4 px-2 grid grid-flow-col gap-7 overflow-x-auto overscroll-x-contain"
-  >
-    {
-      projects.map((project) => (
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          <div class="card-carrousel flex-col  w-72 rounded-lg flex shadow-lg mx-2 my-5 bg-white">
-            <div class=" flex  justify-center mx-20 my-12  py-10 px-10 rounded-lg items-center bg-yellow-400">
-              <img src={project.imgSrc} alt={project.name} class=" w-10 h-10" />
-            </div>
+  <div class="wrapper  w-full relative">
+    <i class="icon-right hidden lg:absolute ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-arrow-badge-right-filled"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M7 6l-.112 .006a1 1 0 0 0 -.669 1.619l3.501 4.375l-3.5 4.375a1 1 0 0 0 .78 1.625h6a1 1 0 0 0 .78 -.375l4 -5a1 1 0 0 0 0 -1.25l-4 -5a1 1 0 0 0 -.78 -.375h-6z"
+          stroke-width="0"
+          fill="currentColor"></path>
+      </svg>
+    </i>
+
+    <div
+      class="carrousel-container w-full py-4 my-4 px-2 grid grid-flow-col gap-7 md:gap-12 overflow-x-auto overscroll-x-contain"
+    >
+      {
+        projects.map((project) => (
+          <div
+            class="card-carrousel flex-col  w-11/12 rounded-lg flex shadow-lg mx-10 my-5  bg-white "
+            draggable="false"
+          >
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer "
+              class="bg-white"
+            >
+              <div class=" flex  justify-center mx-20 my-12  py-10 px-10 rounded-lg items-center bg-yellow-400">
+                <img
+                  src={project.imgSrc}
+                  alt={project.name}
+                  class=" w-10 h-10"
+                />
+              </div>
+            </a>
             <div class="bg-white rounded-lg py-12 shadow flex justify-center items-center px-7  flex-col h-20 text-gray-900">
               <h2 class="text-sm text-gray-700 mt-2 text-center font-semibold">
                 {project.name}
@@ -32,23 +67,52 @@ import { projects } from "../data/projects";
               <p class="text-xs my-3">{project.description}</p>
             </div>
           </div>
-        </a>
-      ))
-    }
+        ))
+      }
+    </div>
+
+    <i class="icon-left hidden lg:absolute">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-arrow-badge-left-filled"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M17 6h-6a1 1 0 0 0 -.78 .375l-4 5a1 1 0 0 0 0 1.25l4 5a1 1 0 0 0 .78 .375h6l.112 -.006a1 1 0 0 0 .669 -1.619l-3.501 -4.375l3.5 -4.375a1 1 0 0 0 -.78 -1.625z"
+          stroke-width="0"
+          fill="currentColor"></path>
+      </svg>
+    </i>
   </div>
 </div>
 
 <style>
-  .carrousel-card-container {
+  .carrousel-container {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
   }
 
-  .carrousel-card-container::-webkit-scrollbar {
+  .carrousel-container .dragging .card-carrousel {
+    cursor: gra;
+    user-select: none;
+  }
+
+  .carrousel-container::-webkit-scrollbar {
     display: none;
   }
 
   .card-carrousel {
     scroll-snap-align: start;
   }
+
+
 </style>
+
