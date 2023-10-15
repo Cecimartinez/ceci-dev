@@ -1,0 +1,81 @@
+<form
+  onsubmit="
+  my_modal_2.showModal()
+"
+  action="https://formsubmit.co/martinezcecilia2707@gmail.com"
+  id="form"
+  action="#"
+  method="POST"
+  class="mx-auto mt-8 max-w-xl sm:mt-10"
+>
+  <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+    <div class="field">
+      <label
+        for="name"
+        class="block text-sm font-semibold leading-6 text-gray-900"
+        >Full name</label
+      >
+      <div class="mt-2.5">
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          class="block w-full bg-white rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label
+        for="email"
+        class="block text-sm font-semibold leading-6 text-gray-900">Email</label
+      >
+      <div class="mt-2.5">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          required
+          class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset bg-white focus:ring-yellow-600 sm:text-sm sm:leading-6"
+        />
+      </div>
+    </div>
+    <div class="sm:col-span-2 field">
+      <label
+        for="message"
+        class="block text-sm font-semibold leading-6 text-gray-900"
+        >Message</label
+      >
+      <div class="mt-2.5">
+        <textarea
+          name="message"
+          required
+          id="message"
+          rows="4"
+          class="bg-white block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="mt-10">
+    <input type="hidden" name="_next" value="http://localhost:4321/#contact" />
+    <input
+      type="submit"
+      id="button"
+      value="Send Email"
+      class="block w-full rounded-md bg-yellow-400 px-3.5 py-2.5 text-center text-sm font-semibold text-gray-950 shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+    />
+    <dialog id="my_modal_2" class="modal">
+      <div class="modal-box bg-white">
+        <h3 class="font-bold text-lg text-yellow-400">
+          Contact form sent successfully!
+        </h3>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  </div>
+</form>
